@@ -25,3 +25,4 @@ Desarrollo e implantación de sistemas de software
   Tomando en cuenta lo ridículamente específico que se estaba poniendo este programa a la hora de desplegar las prendas que se tenían en este clóset, pensé en llevarlo aún más allá. Implementando el patrón de Decorator, fue posible agregarle una nota a cada una de las prendas. Estas notas pueden ser sobre lo que sea realmente, pero por el momento nomás dejé algunos ejemplos. Incluso se podría añadir una nota para diferenciar si una prenda es mi favorita o algo así. Ahora con este último patrón, estos pantalones y camisas son desplegadas con el detalle que se merecen ante cualquier usuario.
 
 Diagrama de clases del proyecto en UML:
+![alt text](image.png)
