@@ -5,37 +5,40 @@
 from abc import ABC, abstractmethod
 
 
+from abc import ABC, abstractmethod
+
 class Garment(ABC):
+    def __init__(self, fabric=None, fit=None, length=None):
+        self.fabric = fabric
+        self.fit = fit
+        self.length = length
+
     @abstractmethod
     def accept(self, visitor):
         pass
 
 class Pants(Garment):
     def __init__(self, fabric=None, fit=None, length=None, waist=None):
-        self.fabric = fabric
-        self.fit = fit
-        self.length = length
-
+        super().__init__(fabric, fit, length)
         self.waist = waist
 
     def __str__(self):
         return f"Pants with {self.fabric} fabric, {self.fit} fit, and {self.length} length."
 
     def accept(self, visitor):
-            return visitor.visit_pants(self)
+        return visitor.visit_pants(self)
 
 class Shirt(Garment):
     def __init__(self, fabric=None, fit=None, length=None, chest=None):
-        self.fabric = fabric
-        self.fit = fit
-        self.length = length
+        super().__init__(fabric, fit, length)
         self.chest = chest
 
     def __str__(self):
         return f"Shirt with {self.fabric} fabric, {self.fit} fit, and {self.length} length."
 
     def accept(self, visitor):
-            return visitor.visit_shirt(self)
+        return visitor.visit_shirt(self)
+
 
 # =========================================================================================
 # Visitor
